@@ -5,9 +5,8 @@ import { notification, Spin } from "antd";
 import { update } from "../utility/api";
 import classes from "./UpdatePost.module.css";
 import { updatePost } from "../Slices/postSlice";
-type Props = {};
 
-const UpdatePost = (props: Props) => {
+const UpdatePost = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const [inputValue, setInputValue] = useState({
@@ -24,7 +23,7 @@ const UpdatePost = (props: Props) => {
     });
   };
 
-  const handleUpdate = async (e) => {
+  const handleUpdate = async (e: { preventDefault: () => void }) => {
     setLoading(true);
     e.preventDefault();
     dispatch(updatePost(inputValue));

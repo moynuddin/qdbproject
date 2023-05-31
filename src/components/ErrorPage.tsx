@@ -1,5 +1,5 @@
 type Props = {
-  resetErrorBoundary: any;
+  resetErrorBoundary: never;
 };
 
 const ErrorPage = (props: Props) => {

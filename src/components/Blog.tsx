@@ -5,10 +5,9 @@ import { getPosts } from "../utility/api";
 
 import Post from "./Post";
 import classes from "./Blog.module.css";
-import { PostList } from "../Slices/postSlice";
-type Props = {};
+import { postList } from "../Slices/postSlice";
 
-const Blog = (props: Props) => {
+const Blog = () => {
   const dispath = useDispatch();
   const errorHandler = useErrorBoundary();
   const { blogs: posts } = useSelector((state) => state.posts);
@@ -16,7 +15,7 @@ const Blog = (props: Props) => {
     const getPost = async () => {
       try {
         const { data } = await getPosts();
-        dispath(PostList(data));
+        dispath(postList(data));
       } catch (error) {
         errorHandler(error);
         console.error(error);
@@ -25,8 +24,6 @@ const Blog = (props: Props) => {
     getPost();
   }, [dispath, errorHandler]);
 
-  console.log(posts);
-  // console.log()
   return (
     <div className={classes.blogWrapper}>
       <h1 className={classes.title}>Blog Post List</h1>

@@ -1,18 +1,19 @@
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import classes from "./Post.module.css";
-import { SinglePost, deletePost } from "../Slices/postSlice";
+import { singlePost } from "../Slices/postSlice";
+import { PostType } from "../../typings";
+
 type Props = {
-  post: unknown;
+  post: PostType;
 };
 
 const Post = ({ post }: Props) => {
-  const { blogs } = useSelector((state) => state.posts);
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const handlePost = (post) => {
+  const handlePost = (post: PostType) => {
     navigate(`/postdetails/${post.id}`);
-    dispatch(SinglePost(post));
+    dispatch(singlePost(post));
   };
 
   return (

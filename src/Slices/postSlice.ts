@@ -9,15 +9,11 @@ const postSlice = createSlice({
   name: "post",
   initialState,
   reducers: {
-    PostList: (state, action) => {
+    postList: (state, action) => {
       state.blogs = action.payload;
     },
-    SinglePost: (state, action) => {
+    singlePost: (state, action) => {
       state.post = action.payload;
-    },
-
-    deletePost: (state, action) => {
-      return state.blogs.filter((item) => item.id !== action.payload);
     },
 
     updatePost: (state, action) => {
@@ -26,7 +22,6 @@ const postSlice = createSlice({
   },
 });
 
-export const { PostList, SinglePost, deletePost, updatePost } =
-  postSlice.actions;
+export const { postList, singlePost, updatePost } = postSlice.actions;
 
 export default postSlice.reducer;
