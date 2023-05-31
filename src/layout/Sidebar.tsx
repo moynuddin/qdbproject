@@ -28,6 +28,7 @@ const Sidebar = (props: Props) => {
           <Link to="/">
             <img src={qdb} alt="logo" />
           </Link>
+          <p className={classes.title}>QDB</p>
         </div>
 
         <div className={classes.profile}>
