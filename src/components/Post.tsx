@@ -17,7 +17,7 @@ const Post = ({ post }: Props) => {
   };
 
   return (
-    <div>
+    <div data-testid="post-test">
       <div className={classes.postContainer} onClick={() => handlePost(post)}>
         <h1 className={classes.title}>{post?.title}</h1>
         <p className={classes.body}>{post?.body}</p>

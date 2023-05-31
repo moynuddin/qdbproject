@@ -22,7 +22,7 @@ const Sidebar = (props: Props) => {
     user();
   }, [dispatch]);
   return (
-    <div>
+    <div data-testid="sidebar-render">
       <div className={classes.sidebar}>
         <div className={classes.brand}>
           <Link to="/">
