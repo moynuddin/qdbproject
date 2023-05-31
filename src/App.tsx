@@ -9,7 +9,7 @@ import UpdatePost from "./components/updatePost";
 function App() {
   return (
     <>
-      <div className={classes.wrapper}>
+      <div className={classes.wrapper} data-tesid="app-works">
         <Sidebar />
         <Routes>
           <Route path="/" element={<Blog />} />
