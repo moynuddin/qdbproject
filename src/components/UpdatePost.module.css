@@ -1,0 +1,45 @@
+.formWrapper {
+  width: 100%;
+  text-align: center;
+  margin: 50px;
+}
+
+.input {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.formControl {
+  width: 450px;
+  border: none;
+  outline: 0;
+  background-color: #f1f1f1;
+  height: 30px;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+
+.inputForm {
+  width: 450px;
+  background-color: #f1f1f1;
+  border: none;
+  outline: 0;
+  padding: 10px;
+}
+
+.btn {
+  margin-top: 20px;
+  background-color: rgb(36, 36, 170);
+  padding: 10px 25px;
+  border: none;
+  outline: 0;
+  border-radius: 10px;
+  color: #fff;
+}
+
+.spinner {
+  width: 100%;
+  margin: auto;
+  text-align: center;
+}

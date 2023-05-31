@@ -1,0 +1,38 @@
+.postDetail {
+  background-color: #f1f1f1;
+  padding: 10px;
+  margin: 20px;
+  border-radius: 10px;
+  height: 100%;
+}
+
+.title {
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+.btnWrapper {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.btn {
+  border: none;
+  outline: 0;
+  padding: 10px 25px;
+  color: #fff;
+}
+.edit {
+  background-color: rgb(115, 29, 196);
+}
+
+.delete {
+  background-color: rgb(193, 9, 9);
+}
+.spinner {
+  width: 100%;
+  margin: auto;
+  text-align: center;
+}
